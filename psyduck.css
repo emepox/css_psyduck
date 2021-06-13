@@ -1,0 +1,194 @@
+:root {
+    --test: red;
+    --psyduck-yellow: rgb(235, 204, 101);
+    --yellow-profile: brown;
+    --beak: rgb(253, 235, 176);
+}
+
+main {
+    border: 4px solid var(--psyduck-yellow);
+    height: 90vmin;
+    width: 90vmin;
+}
+
+#psyduck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+}
+
+
+/* CABEZA */
+
+.cabeza {
+    width: 47%;
+    height: 37%;
+    border-radius: 50%;
+    background-color: var(--psyduck-yellow);
+    border-bottom: 1px solid var(--yellow-profile);
+    position: relative;
+    top: 10%;
+    left: 3%;
+    z-index: 1;
+}
+
+/* CUERPO */
+.cuerpo {
+    width: 60%;
+    height: 60%;
+    border-radius: 72% 42% 46% 40%;
+    background-color: var(--psyduck-yellow);
+    position: relative;
+    bottom: 5%;
+    
+}
+
+/* PELO */
+
+.pelo>div {
+    position: absolute;
+    background-color: transparent;
+    border-top: 6px solid black;
+    width: 23%;
+    height: 27%;
+    border-radius: 50%;
+}
+.pelo>div:nth-child(1) {
+    top: -16%;
+    right: 17%;
+    transform: rotate(303deg);
+
+}
+
+.pelo>div:nth-child(2) {
+    top: -9%;
+    right: 15%;
+    transform: rotate(327deg);
+
+}
+
+.pelo>div:nth-child(3) {
+    width: 36%;
+    top: -19%;
+    right: 13%;
+    transform: rotate(276deg);
+
+}
+
+
+/* PICO */
+.pico {
+    width: 50%;
+    height: 68%;
+    border-radius: 17% 31% 24% 26%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: var(--beak);
+    position: absolute;
+    top: 58%;
+    left: 0%;
+    transform: skew(323deg, 7deg);
+}
+
+/* OJOS */
+
+.ojo-izquierdo, .ojo-derecho {
+    width: 28%;
+    height: 26%;
+    border-radius: 50%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ojo-izquierdo {
+    top: 31%;
+    left: 0%;
+}
+
+.ojo-derecho {
+    top: 36%;
+    right: 19%;
+}
+
+.pupila {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+/* ALAS */
+
+.ala-izquierda {
+    width: 30%;
+    height: 50%;
+    border-radius: 26% 68% 35% 51%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: var(--psyduck-yellow);
+    position: absolute;
+    top: -22%;
+    left: -1%;
+    transform: rotate(32deg);
+}
+
+.ala-derecha {
+    width: 30%;
+    height: 50%;
+    border-radius: 19% 59% 42% 33%;
+    border-bottom: 1px solid var(--yellow-profile);
+    border-right: 1px solid var(--yellow-profile);
+    background-color: var(--psyduck-yellow);
+    position: absolute;
+    top: -3%;
+    right: -10%;
+    transform: rotate(358deg);
+    z-index: 1;
+}
+
+/* PATAS */
+
+.pata-izquierda {
+    width: 23%;
+    height: 51%;
+    border-radius: 27% 30% 17% 70%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: var(--beak);
+    position: absolute;
+    bottom: -4%;
+    left: -10%;
+    transform: rotate(333deg);
+    
+}
+
+.pata-derecha {
+    width: 32%;
+    height: 51%;
+    border-radius: 0% 0% 64% 38%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: var(--beak);
+    position: absolute;
+    bottom: -7%;
+    right: 13%;
+    transform: rotate(17deg);
+}
+
+/* COLA */
+.cola {
+    width: 23%;
+    height: 51%;
+    border-radius: 0% 84% 3% 94%;
+    border-bottom: 1px solid var(--yellow-profile);
+    background-color: var(--psyduck-yellow);
+    position: absolute;
+    bottom: -6%;
+    right: -10%;
+    transform: rotate(266deg);
+    z-index: -3;
+}
