@@ -1,8 +1,11 @@
 :root {
     --test: red;
     --psyduck-yellow: rgb(235, 204, 101);
-    --yellow-profile: brown;
+    --psyduck-shadow: rgb(211, 183, 92);
+    --psyduck-profile: rgb(165, 101, 42);
     --beak: rgb(253, 235, 176);
+    --beak-shadow:rgb(226, 210, 157);
+    --beak-profile: rgb(146, 101, 34);
 }
 
 main {
@@ -28,12 +31,14 @@ main {
     height: 37%;
     border-radius: 50%;
     background-color: var(--psyduck-yellow);
-    border-bottom: 1px solid var(--yellow-profile);
-    border-left: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--psyduck-profile);
+    border-left: 1px solid var(--psyduck-profile);
     position: relative;
     top: 10%;
     left: 3%;
     z-index: 1;
+    box-shadow: inset 5px -7px 0px 0px var(--psyduck-shadow),
+    0px 55px 1px 1px var(--psyduck-shadow);
 }
 
 /* CUERPO */
@@ -42,9 +47,10 @@ main {
     height: 60%;
     border-radius: 72% 42% 46% 40%;
     background-color: var(--psyduck-yellow);
-    border-right: 1px solid var(--yellow-profile);
+    border-right: 1px solid var(--psyduck-profile);
     position: relative;
     bottom: 5%;
+    box-shadow: inset 63px -7px 0px 0px var(--psyduck-shadow);
     
 }
 
@@ -84,11 +90,12 @@ main {
     width: 55%;
     height: 68%;
     border-radius: 17% 31% 24% 26%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
     position: relative;
     top: 58%;
     left: 0%;
     transform: skew(323deg, 7deg);
+    
 }
 
 .tramo {
@@ -99,7 +106,7 @@ main {
     right: 0%;
     border-radius: 17% 19% 79% 10%;
     background-color: var(--beak);
-    border-right: 2px solid var(--yellow-profile);
+    border-right: 2px solid var(--beak-profile);
     
 }
 
@@ -111,8 +118,9 @@ main {
     top: 4%;
     left: 27%;
     background-color: var(--beak);
-    border-top: 2px solid var(--yellow-profile);
+    border-top: 1px solid var(--beak-profile);
     transform: skew(318deg, 39deg);
+    box-shadow: inset 1px 1px 1px 1px var(--beak-shadow);
 }
 
 .agujeros {
@@ -129,7 +137,7 @@ main {
     width: 7%;
     height: 59%;
     border-radius: 10% 0% 100% 10%;
-    background-color: var(--yellow-profile);
+    background-color: var(--psyduck-profile);
 }
 
 .agujeros>div:nth-child(1) {
@@ -148,7 +156,9 @@ main {
     top: 27%;
     right: -10%;
     background-color: var(--beak);
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
+    box-shadow: inset 1px -12px 0px 0px var(--beak-shadow)
+    
 }
 
 
@@ -158,7 +168,7 @@ main {
     width: 25%;
     height: 23%;
     border-radius: 50%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--psyduck-profile);
     background-color: white;
     position: absolute;
     display: flex;
@@ -168,8 +178,8 @@ main {
 }
 
 .ojo-izquierdo {
-    top: 36%;
-    left: 4%;
+    top: 39%;
+    left: 5%;
 }
 
 .ojo-derecho {
@@ -190,7 +200,7 @@ main {
     width: 30%;
     height: 50%;
     border-radius: 26% 68% 35% 51%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--psyduck-profile);
     background-color: var(--psyduck-yellow);
     position: absolute;
     top: -22%;
@@ -203,8 +213,8 @@ main {
     height: 12%;
     background-color: var(--psyduck-yellow);
     border-radius: 101% 7% 70% 1%;
-    border-top: 2px solid var(--yellow-profile);
-    border-right: 2px solid var(--yellow-profile);
+    border-top: 2px solid var(--psyduck-profile);
+    border-right: 2px solid var(--psyduck-profile);
 
 }
 
@@ -213,15 +223,16 @@ main {
     width: 30%;
     height: 50%;
     border-radius: 19% 78% 34% 55%;
-    border-bottom: 1px solid var(--yellow-profile);
-    border-right: 1px solid var(--yellow-profile);
-    border-left: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--psyduck-profile);
+    border-right: 1px solid var(--psyduck-profile);
+    border-left: 1px solid var(--psyduck-profile);
     background-color: var(--psyduck-yellow);
     position: absolute;
     top: -3%;
     right: -10%;
     transform: rotate(358deg);
     z-index: 1;
+    box-shadow: inset 1px -19px 0px 0px var(--psyduck-shadow);
 }
 
 .ala-derecha>div {
@@ -229,8 +240,8 @@ main {
     height: 12%;
     background-color: var(--psyduck-yellow);
     border-radius: 64% 0% 164% 0%;
-    border-top: 2px solid var(--yellow-profile);
-    border-right: 2px solid var(--yellow-profile);
+    border-top: 2px solid var(--psyduck-profile);
+    border-right: 2px solid var(--psyduck-profile);
     transform: rotate(300deg);
 }
 
@@ -257,8 +268,8 @@ main {
     width: 23%;
     height: 51%;
     border-radius: 27% 30% 83% 100%;
-    border-bottom: 1px solid var(--yellow-profile);
-    border-left: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
+    border-left: 1px solid var(--beak-profile);
     background-color: var(--beak);
     position: absolute;
     bottom: -4%;
@@ -271,9 +282,9 @@ main {
     height: 15%;
     background-color: var(--beak);
     border-radius: 0% 310% 64% 90%;
-    border-top: 1px solid var(--yellow-profile);
-    border-left: 1px solid var(--yellow-profile);
-    border-right: 1px solid var(--yellow-profile);
+    border-top: 1px solid var(--beak-profile);
+    border-left: 1px solid var(--beak-profile);
+    border-right: 1px solid var(--beak-profile);
 
 }
 
@@ -296,7 +307,7 @@ main {
     height: 13%;
     position: absolute;
     border-radius: 10% 10% 30% 10%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
     background-color: white;
     z-index: -1;
 }
@@ -314,7 +325,6 @@ main {
 }
 
 
-
 /* pata derecha */
 
 .pata-derecha {
@@ -323,7 +333,7 @@ main {
     width: 32%;
     height: 51%;
     border-radius: 0% 14% 64% 38%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
     background-color: var(--beak);
     position: absolute;
     bottom: -7%;
@@ -336,10 +346,9 @@ main {
     height: 15%;
     background-color: var(--beak);
     border-radius: 0% 310% 64% 90%;
-    border-top: 1px solid var(--yellow-profile);
-    border-left: 1px solid var(--yellow-profile);
-    border-right: 1px solid var(--yellow-profile);
-
+    border-top: 1px solid var(--beak-profile);
+    border-left: 1px solid var(--beak-profile);
+    border-right: 1px solid var(--beak-profile);
 }
 
 .pata-derecha>div:nth-child(1) {
@@ -361,7 +370,7 @@ main {
     height: 13%;
     position: absolute;
     border-radius: 10% 10% 30% 10%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--beak-profile);
     background-color: var(--psyduck-yellow);
 }
 
@@ -382,11 +391,12 @@ main {
     width: 23%;
     height: 51%;
     border-radius: 0% 84% 3% 94%;
-    border-bottom: 1px solid var(--yellow-profile);
+    border-bottom: 1px solid var(--psyduck-profile);
     background-color: var(--psyduck-yellow);
     position: absolute;
     bottom: -6%;
     right: -10%;
     transform: rotate(266deg);
     z-index: -3;
+    box-shadow: inset 19px 16px 0px 0px var(--psyduck-shadow);
 }
