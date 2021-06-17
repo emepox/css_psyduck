@@ -1,11 +1,10 @@
 :root {
-    --test: red;
     --psyduck-yellow: rgb(235, 204, 101);
     --psyduck-shadow: rgb(211, 183, 92);
     --psyduck-profile: rgb(165, 101, 42);
     --beak: rgb(253, 235, 176);
     --beak-shadow:rgb(226, 210, 157);
-    --beak-profile: rgb(146, 101, 34);
+    --beak-profile: rgb(167, 138, 42);
 }
 
 main {
@@ -33,11 +32,12 @@ main {
     background-color: var(--psyduck-yellow);
     border-bottom: 1px solid var(--psyduck-profile);
     border-left: 1px solid var(--psyduck-profile);
+    border-top: 1px solid var(--psyduck-profile);
     position: relative;
     top: 10%;
     left: 3%;
     z-index: 1;
-    box-shadow: inset 5px -7px 0px 0px var(--psyduck-shadow),
+    box-shadow: inset 0.5em -1em 0 0 var(--psyduck-shadow),
     0px 55px 1px 1px var(--psyduck-shadow);
 }
 
@@ -50,7 +50,7 @@ main {
     border-right: 1px solid var(--psyduck-profile);
     position: relative;
     bottom: 5%;
-    box-shadow: inset 63px -7px 0px 0px var(--psyduck-shadow);
+    box-shadow: inset 3.5em -2em 0 0 var(--psyduck-shadow);
     
 }
 
@@ -107,6 +107,8 @@ main {
     border-radius: 17% 19% 79% 10%;
     background-color: var(--beak);
     border-right: 2px solid var(--beak-profile);
+    box-shadow: inset 0.5em -0.1em 0 0 var(--beak-shadow), 
+                inset -0.5em -0.1em 0 0 var(--beak-shadow);
     
 }
 
@@ -120,8 +122,9 @@ main {
     background-color: var(--beak);
     border-top: 1px solid var(--beak-profile);
     transform: skew(318deg, 39deg);
-    box-shadow: inset 1px 1px 1px 1px var(--beak-shadow);
-}
+    box-shadow: inset -1.7em 0 0 0 var(--beak-shadow),
+                inset 0 -0.2em 0 0 var(--beak-shadow)
+        }   
 
 .agujeros {
     display: flex;
@@ -157,7 +160,8 @@ main {
     right: -10%;
     background-color: var(--beak);
     border-bottom: 1px solid var(--beak-profile);
-    box-shadow: inset 1px -12px 0px 0px var(--beak-shadow)
+    box-shadow: inset 0.1em -0.8em 0 0 var(--beak-shadow), 
+                    3em 2em 0.1em -0.2em var(--psyduck-shadow);
     
 }
 
@@ -174,6 +178,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0.1em 0.1em 0 0 var(--psyduck-shadow);
 
 }
 
@@ -215,6 +220,7 @@ main {
     border-radius: 101% 7% 70% 1%;
     border-top: 2px solid var(--psyduck-profile);
     border-right: 2px solid var(--psyduck-profile);
+    box-shadow: inset 0.4em 0 0 0 var(--psyduck-shadow);
 
 }
 
@@ -232,7 +238,7 @@ main {
     right: -10%;
     transform: rotate(358deg);
     z-index: 1;
-    box-shadow: inset 1px -19px 0px 0px var(--psyduck-shadow);
+    box-shadow: inset 0.1rem -1.4rem 0rem 0rem var(--psyduck-shadow);
 }
 
 .ala-derecha>div {
@@ -243,6 +249,7 @@ main {
     border-top: 2px solid var(--psyduck-profile);
     border-right: 2px solid var(--psyduck-profile);
     transform: rotate(300deg);
+    box-shadow: inset -0.4em -0.2em 0 0 var(--psyduck-shadow);
 }
 
 .ala-derecha>div:nth-child(3) {
@@ -275,6 +282,7 @@ main {
     bottom: -4%;
     left: -10%;
     transform: rotate(333deg) skew(359deg, 11deg);
+    box-shadow: inset 0em -1.5em 0 0.2em var(--beak-shadow);
 }
 
 .pata-izquierda>div {
@@ -310,6 +318,7 @@ main {
     border-bottom: 1px solid var(--beak-profile);
     background-color: white;
     z-index: -1;
+    box-shadow: 0.1em 0.3em 0 0 var(--beak-shadow);
 }
 
 .pata-izquierda>div:nth-child(2)::before {
@@ -338,7 +347,9 @@ main {
     position: absolute;
     bottom: -7%;
     right: 13%;
+    z-index: 3;
     transform: rotate(17deg);
+    box-shadow: inset 0em -1.5em 0 0.2em var(--beak-shadow);
 }
 
 .pata-derecha>div {
@@ -372,6 +383,7 @@ main {
     border-radius: 10% 10% 30% 10%;
     border-bottom: 1px solid var(--beak-profile);
     background-color: var(--psyduck-yellow);
+    box-shadow: 0.1em 0.3em 0 0 var(--beak-shadow);
 }
 
 .pata-derecha>div:nth-child(2)::before {
@@ -398,5 +410,20 @@ main {
     right: -10%;
     transform: rotate(266deg);
     z-index: -3;
-    box-shadow: inset 19px 16px 0px 0px var(--psyduck-shadow);
+    box-shadow: inset 1em 0.8em 0em 0em var(--psyduck-shadow);
 }
+
+/* SOMBRA */
+
+.sombra {
+    width: 130%;
+    height: 23%;
+    border-radius: 50%;
+    background-color: gainsboro;
+    position: absolute;
+    right: -17%;
+    bottom: -7%;
+    transform: skew(-21deg, 0deg);
+    z-index: -4;
+    box-shadow: 0em 0em 0.4em 0em gainsboro;
+  }
